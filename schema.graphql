@@ -1,0 +1,17 @@
+type RecipeOutput {
+  id: Int!
+  title: String!
+  imageUrl: String
+}
+
+type Query {
+  article: ArticleQuery
+}
+
+type ArticleQuery {
+  recipe(input: RecipeInput!): RecipeOutput
+}
+
+input RecipeInput {
+  name: String!
+}
